@@ -38,6 +38,15 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
             display-name = "Dot/ExlamationMark";
         };
+
+        sp: shift_partner {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_PARTNER";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+            display-name = "ShiftPartner";
+        }
     };
 
     conditional_layers {
