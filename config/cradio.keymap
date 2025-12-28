@@ -24,7 +24,7 @@
         sp: shift_partner {
             compatible = "zmk,behavior-mod-morph";
             label = "SHIFT_PARTNER";
-            #binding-cells = <2>;
+            #binding-cells = <0>;
             bindings = <&kp>, <&kp>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
         };
