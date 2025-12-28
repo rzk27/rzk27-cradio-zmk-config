@@ -21,12 +21,22 @@
             bindings = <&kp>, <&kp>;
         };
 
-        sp: shift_partner {
+        cq: comma_qmark {
             compatible = "zmk,behavior-mod-morph";
-            label = "SHIFT_PARTNER";
+            label = "COMMA_QMARK";
             #binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp COMMA>, <&kp QMARK>;
             mods = <(MOD_LSFT | MOD_RSFT)>;
+            display-name = "Comma/QuestionMark";
+        };
+
+        de: dot_excl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_EXCL";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp EXCL>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+            display-name = "Dot/ExlamationMark";
         };
     };
 
@@ -49,8 +59,8 @@
         //│  A              │  S              │  D              │  F              │  G              │   │  H              │  J              │  K              │  L              │ ' "             │
             HRML(A,               S,                D,                F)            &kp G                 &kp H             HRMR(J,               K,                L,               SQT)
         //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
-        //│  Z              │  X              │  C              │  V              │  B              │   │  N              │  M              │  , ?            │  . >            │  / ?            │
-            &kp Z             &kp X             &kp C             &kp V             &kp B                 &kp N             &kp M             &kp COMMA   &kp DOT           &kp FSLH
+        //│  Z              │  X              │  C              │  V              │  B              │   │  N              │  M              │  , ?            │  . !            │  / ?            │
+            &kp Z             &kp X             &kp C             &kp V             &kp B                 &kp N             &kp M             &cq               &de               &kp FSLH
         //╰─────────────────┴─────────────────┴─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┴─────────────────┴─────────────────╯
                                                                  &lt 2 TAB          &kp ENTER             &kp SPACE         &lt 1 BSPC
         //                                                      ╰─────────────────┴─────────────────╯   ╰─────────────────┴─────────────────╯
