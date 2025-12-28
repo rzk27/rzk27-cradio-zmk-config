@@ -64,7 +64,7 @@
             quick-tap-ms = <QUICK_TAP_MS>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
             bindings = <&kp>, <&de>;
-        }
+        };
     };
 
     conditional_layers {
