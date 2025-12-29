@@ -15,7 +15,7 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LSHFT k3  &ht LCTRL k4
 #define HRMR(k1,k2,k3,k4) &ht RCTRL k1  &ht RSHFT k2  &ht RALT k3  &ht RGUI k4
 
-#define L0_HRMR(k1,k2,k3,k4) &ht RCTRL k1  &cq_ht RSHFT k2  &de_ht RALT k3  &ht RGUI k4
+#define BASE_HRMR(k1,k2,k3,k4) &ht RCTRL k1  &cq_ht RSHFT k2  &de_ht RALT k3  &ht RGUI k4
 
 / {
     behaviors {
@@ -108,7 +108,7 @@
             &kp A             &kp S             &kp D             &kp F             &kp G                 &kp N             &kp M             &kp K             &kp L             &kp SQT
         //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
         //│  Z              │  X              │  C              │  V              │  B              │   │  N              │  M              │  , ?            │  . !            │ ; :             │
-            HRML(Z,               X,                C,                V)            &kp B                 &kp N             L0_HRMR(M,            0,                0,               SEMI)
+            HRML(Z,               X,                C,                V)            &kp B                 &kp N             BASE_HRMR(M,          0,                0,               SEMI)
         //╰─────────────────┴─────────────────┴─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┴─────────────────┴─────────────────╯
                                                                    &lt 1 ENTER      &kp SPACE             &kp BSPC          &lt 2 DEL
         //                                                      ╰─────────────────┴─────────────────╯   ╰─────────────────┴─────────────────╯
