@@ -54,6 +54,24 @@
             mods = <(MOD_LSFT | MOD_RSFT)>;
             display-name = "Ampersand/Pipe";
         };
+        
+        te: tab_esc {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TAB_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+            display-name = "Tab/Escape";
+        };
+        
+        ip: ins_pscrn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "INS_PSCRN";
+            #binding-cells = <0>;
+            bindings = <&kp INS>, <&kp PSCRN>;
+            mods = <(MOD_LSFT | MOD_RSFT)>;
+            display-name = "Insert/PrintScreen";
+        };
 
         cq_ht: comma_qmark_hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -106,7 +124,7 @@
             &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp UNDER             &kp EQUAL         &kp HOME          &kp END           &kp PG_UP         &kp PG_DN
         //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
         //│  \              │  @              │  #              │  $              │  %              │   │  ^              │  +              │  -              │  *              │  /              │
-            HRML(BSLH,            AT,               HASH,              DLLR)        &kp PRCNT             &kp CARET         HRMR(PLUS,           KP_MINUS,         KP_MULTIPLY,      KP_DIVIDE)
+            HRML(BSLH,            AT,               HASH,              DLLR)        &kp PRCNT             &kp CARET         HRMR(PLUS,            KP_MINUS,         KP_MULTIPLY,      KP_DIVIDE)
         //╰─────────────────┴─────────────────┴─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┴─────────────────┴─────────────────╯
                                                                   &trans            &kp GRAVE             &ap               &trans
         //                                                      ╰─────────────────┴─────────────────╯   ╰─────────────────┴─────────────────╯
@@ -123,9 +141,9 @@
             &kp EXCL          &kp AT            &kp HASH          &kp DLLR          &kp PRCNT             &kp ASTRK         &kp MINUS         &kp EQUAL         &kp BSLH          &kp GRAVE
         //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
         //│  \              │  <              │  [              │  (              │  {              │   │  }              │  )              │  ]              │  >              │  /              │
-            HRML(BSLH,            AT,               HASH,              DLLR)        &trans                &kp AMPS          HRMR(PLUS,           KP_MINUS,         KP_MULTIPLY,      KP_DIVIDE)
+            HRML(BSLH,           LT,               LBKT,             LPAR)             &kp LBRC           &kp RBRC          HRMR(RPAR,            RBKT,             GT,              KP_DIVIDE)
         //╰─────────────────┴─────────────────┴─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┴─────────────────┴─────────────────╯
-                                                                  &trans            &trans                &trans            &trans
+                                                                  &trans            &te                   &ip               &trans
         //                                                      ╰─────────────────┴─────────────────╯   ╰─────────────────┴─────────────────╯
             >;
         };
