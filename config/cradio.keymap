@@ -139,7 +139,7 @@
             &kp F1            &kp F2            &kp F3            &kp F4            &kp F5                &kp F6            &kp F7            &kp F8            &kp F9            &kp F10
         //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
         //│ MOUSE LEFT      │ MOUSE DOWN      │ MOUSE UP        │ MOUSE RIGHT     │  F11            │   │  F12            │ LEFT CLICK      │ RIGHT CLICK     │ SCROLL UP       │ SCROLL DOWN     │
-            &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP      &mmv MOVE_RIGHT   &kp F11               &kp F12           &mkp MB1          &mkp MB2          &msc SCROLL_UP    &msc SCROLL_DOWN
+            &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP      &mmv MOVE_RIGHT   &kp F11               &kp F12           &mkp MB1          &mkp MB2          &msc SCRL_UP      &msc SCRL_DOWN
         //├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤   ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┤
         //│  \              │  <              │  [              │  (              │  {              │   │  }              │  )              │  ]              │  >              │  /              │
             HRML(BSLH,           LT,               LBKT,             LPAR)             &kp LBRC           &kp RBRC          HRMR(RPAR,            RBKT,             GT,              KP_DIVIDE)
